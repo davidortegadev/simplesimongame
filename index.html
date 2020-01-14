@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>simple simon game</title>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-color: rgb(215, 178, 255);
+		}
+		h1 {
+			font-family: 'Ubuntu Mono', monospace;
+			text-align: center
+		}
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			height: 312px;
+			width: 312px;
+			background-color: #9658FF;
+			border: 3px solid #efefef;
+			margin: 0 auto;
+			border-radius: 25px;
+		}
+		.simon{
+			height: 100px;
+			width: 100px;
+			margin: 25px;
+			border-radius: 50px;
+			transition-duration: 300ms;
+			border: 3px solid #efefef;
+
+		}
+		.simon:active{
+			transition-duration: 150ms;
+			height: 97px;
+			width: 97px;
+		}
+		#simon0{
+			background-color: #30c627;
+		}
+		#simon0:hover{
+			background-color: #36f52d;
+		}
+		#simon0:active{
+			-webkit-box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+			-moz-box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+			box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+		}
+		.simon0active{
+			background-color: #36f52d;
+			-webkit-box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+			-moz-box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+			box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+			transition-duration: 150ms;
+			height: 97px;
+			width: 97px;
+		}
+		#simon1{
+			background-color: #ac2323;
+		}
+		#simon1:hover{
+			background-color: #dc2525;
+		}
+		#simon1:active{
+			-webkit-box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.5);
+			-moz-box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.5);
+			box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.51);
+		}
+		.simon1active{
+			background-color: #dc2525;
+			-webkit-box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.5);
+			-moz-box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.5);
+			box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.51);
+			transition-duration: 150ms;
+			height: 97px;
+			width: 97px;
+		}
+		#simon2{
+			background-color: #d7a81b;
+		}
+		#simon2:hover{
+			background-color: #EBBC1B;
+		}
+		#simon2:active{
+			-webkit-box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+			-moz-box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+			box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+		}
+		.simon2active{
+			background-color: #d7a81b;
+			-webkit-box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+			-moz-box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+			box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+			transition-duration: 150ms;
+			height: 97px;
+			width: 97px;
+		}
+		#simon3{
+			background-color: #1491d7;
+		}
+		#simon3:hover{
+			background-color: #14b0f5;
+		}
+		#simon3:active{
+			-webkit-box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+			-moz-box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+			box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+		}
+		.simon3active{
+			background-color: #14b0f5;
+			-webkit-box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+			-moz-box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+			box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+			transition-duration: 150ms;
+			height: 97px;
+			width: 97px;
+		}
+		#startButton{
+			transition-duration: 250ms;
+			background-color: #9658FF;
+			border: 3px solid #efefef;
+			height: 60px;
+			width: 240px;
+			border-radius: 50px;
+			font-family: 'Ubuntu Mono', monospace;
+			font-size: larger;
+		}
+		#startButton:hover{
+			transition-duration: 250ms;
+			background-color: rgb(169, 141, 208);
+		}
+		#startButton:active{
+			transition-duration: 250ms;
+			height: 55px;
+			width: 235px;
+		}
+	</style>
+</head>
+<body>
+<h1>simple simon game</h1>
+<div class="container">
+	<div class="simon" id="simon0"></div>
+	<div class="simon" id="simon1"></div>
+	<div class="simon" id="simon2"></div>
+	<div class="simon" id="simon3"></div>
+	<p><button id="startButton">press me to play</button></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+	let count = 0;
+	let simonsArray = [];
+	let usersArray = [];
+
+	function startSimon() {
+		// generate random button
+		let randomNumber = Math.floor((Math.random() * 4));
+		// activate random button press
+		$('#simon' + randomNumber).addClass('simon' + randomNumber + 'active');
+		// remove button press class
+		setTimeout(function () {
+			$('#simon' + randomNumber).removeClass("simon" + randomNumber + "active");
+		}, 500);
+		// add to simon array
+		simonsArray.push(randomNumber);
+		console.log(simonsArray)
+	}
+
+	function simonsMove(){
+
+		for (let i=0;i<simonsArray.length;i++){
+			$('#simon' + simonsArray[i]).addClass('simon' + simonsArray[i] + 'active');
+			setTimeout(function () {
+				$('#simon' + simonsArray[i]).removeClass("simon" + simonsArray[i] + "active");
+			}, 500);
+		}
+
+		startSimon();
+	}
+
+	$(document).ready(function(){
+
+	});
+
+	$('#startButton').click(function(){
+		// resets arrays
+		simonsArray = [];
+		usersArray = [];
+		startSimon();
+	});
+
+	// sets up click listeners for buttons + logs button presses to array
+	function clickListener(){
+		for (let i=0;i<=3;i++){
+			$('#simon'+i).click(function(){
+				usersArray.push(i);
+				console.log(usersArray);
+				count++;
+				if (usersArray[usersArray.length-1] === simonsArray[simonsArray.length-1]) {
+					alert('ur rite continue playin')
+					//insert continue game function here
+					simonsMove();
+				} else {
+					alert('ur rong go home ur drunk')
+				}
+			});
+		}
+	}
+	clickListener();
+
+
+</script>
+</body>
+</html>
