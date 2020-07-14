@@ -1,0 +1,132 @@
+body {
+	background-color: rgb(215, 178, 255);
+}
+h1 {
+	font-family: 'Ubuntu Mono', monospace;
+	text-align: center
+}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	height: 312px;
+	width: 312px;
+	background-color: #9658FF;
+	border: 3px solid #efefef;
+	margin: 0 auto;
+	border-radius: 25px;
+}
+.simon{
+	height: 100px;
+	width: 100px;
+	margin: 25px;
+	border-radius: 50px;
+	transition-duration: 300ms;
+	border: 3px solid #efefef;
+
+}
+.simon:active{
+	transition-duration: 150ms;
+	height: 97px;
+	width: 97px;
+	margin: 26px;
+}
+#simon0{
+	background-color: #30c627;
+}
+#simon0:hover{
+	background-color: #36f52d;
+}
+#simon0:active{
+	-webkit-box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+	-moz-box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+	box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+}
+.simon0active{
+	background-color: #36f52d;
+	-webkit-box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+	-moz-box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+	box-shadow: 0px 0px 50px 20px rgba(53,249,44,0.5);
+	transition-duration: 150ms;
+	height: 97px;
+	width: 97px;
+}
+#simon1{
+	background-color: #ac2323;
+}
+#simon1:hover{
+	background-color: #dc2525;
+}
+#simon1:active{
+	-webkit-box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.5);
+	-moz-box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.5);
+	box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.51);
+}
+.simon1active{
+	background-color: #dc2525;
+	-webkit-box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.5);
+	-moz-box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.5);
+	box-shadow: 0px 0px 50px 20px rgba(252, 43, 43, 0.51);
+	transition-duration: 150ms;
+	height: 97px;
+	width: 97px;
+}
+#simon2{
+	background-color: #d7a81b;
+}
+#simon2:hover{
+	background-color: #EBBC1B;
+}
+#simon2:active{
+	-webkit-box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+	-moz-box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+	box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+}
+.simon2active{
+	background-color: #d7a81b;
+	-webkit-box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+	-moz-box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+	box-shadow: 0px 0px 50px 20px rgba(235,188,27,0.5);
+	transition-duration: 150ms;
+	height: 97px;
+	width: 97px;
+}
+#simon3{
+	background-color: #1491d7;
+}
+#simon3:hover{
+	background-color: #14b0f5;
+}
+#simon3:active{
+	-webkit-box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+	-moz-box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+	box-shadow: 0px 0px 50px 20px rgba(20,166,235,0.5);
+}
+.simon3active{
+	background-color: #52c6ff;
+	-webkit-box-shadow: 0px 0px 50px 20px rgba(40, 183, 255, 0.71);
+	-moz-box-shadow: 0px 0px 50px 20px rgba(40, 183, 255, 0.71);
+	box-shadow: 0px 0px 50px 20px rgba(40, 183, 255, 0.71);
+	transition-duration: 150ms;
+	height: 97px;
+	width: 97px;
+}
+#startButton{
+	transition-duration: 250ms;
+	background-color: #9658FF;
+	border: 3px solid #efefef;
+	height: 60px;
+	width: 240px;
+	border-radius: 50px;
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: larger;
+}
+#startButton:hover{
+	transition-duration: 250ms;
+	background-color: rgb(169, 141, 208);
+}
+#startButton:active{
+	transition-duration: 250ms;
+	height: 55px;
+	width: 235px;
+}
