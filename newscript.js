@@ -41,36 +41,58 @@ $(document).ready(function(){
 function startGame(){
 	computerArray = [];
 	userArray = [];
-	count = 0;
-	$('#title').replaceWith("<h1 id='title'>level: "+count+1+"</h1>");
+	count = 1;
+	$('#title').text("level: "+parseInt(count));
 }
 
 $('#startButton').click(function(){
 	startGame()
 	$('#startButton').text("press to restart");
-	computerTurn();
+	displayComputerSequence();
 });
+
+function checkSequence(){
+	// return userArray[userArray.length - 1] === computerArray[computerArray.length - 1];
+
+	for(let i=0;i<userArray.length;i++){
+		if(userArray[i] === computerArray[i]){
+
+		} else {
+			return false
+		}
+	}
+	return true
+}
 
 function clickListener(){
 	for (let i=0;i<=3;i++){
 		$('#simon'+i).click(function(){
+
 			userArray.push(i);
 			console.log(userArray);
-			count++;
-			if (userArray[count-1] === computerArray[count-1]){
-				alert('correct!');
-				userArray = [];
-				setTimeout(function(){
-					computerTurn();
-				}, 1000)
+
+			//runs check function
+			if(checkSequence()){
+				count++;
+				$('#title').text("level: "+parseInt(count));
+				displayComputerSequence();
 			} else {
-				alert('game over!');
-				computerArray = [];
-				userArray = [];
-				count = 0;
+				alert('game over')
 			}
+
+			// if (userArray[count-1] === computerArray[count-1]){
+			// 	alert('correct!');
+			// 	userArray = [];
+			// 	setTimeout(function(){
+			// 		computerTurn();
+			// 	}, 1000)
+			// } else {
+			// 	alert('game over!');
+			// 	computerArray = [];
+			// 	userArray = [];
+			// 	count = 0;
+			// }
 		})
 	}
 }
 clickListener();
-
