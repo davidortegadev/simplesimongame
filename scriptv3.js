@@ -41,7 +41,7 @@ function displayComputerSequence(){
 		//unpresses button with delay based on iteration
 		setTimeout(function(){
 			$('#simon'+computerArray[i]).removeClass('simon'+computerArray[i]+'active');
-		}, i * 500 + 850);
+		}, i * 500 + 750);
 	}
 }
 
