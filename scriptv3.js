@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	highScore = 0;
 
 })
 
@@ -19,7 +20,7 @@ $('#startButton').click(function(){
 	startGame()
 
 	//maybe hide start button altogether?
-	$('#startButton').text(" ");
+	$('#startButton').text("highest score: " + parseInt(highScore));
 })
 
 //computer's turn
@@ -74,6 +75,9 @@ function checkUserChoice(){
 		checkSequenceEnd()
 	} else {
 		//game over script
+		if(count>highScore){
+			highScore = count;
+		}
 		$('#title').text("game over");
 		$('#startButton').text("press to restart");
 	}
@@ -86,7 +90,7 @@ function checkSequenceEnd(){
 		$('#title').text("level: "+parseInt(count));
 		userArray = [];
 		computerTurn();
-		displayComputerSequence();
+		setTimeout(displayComputerSequence,500)
 		userTurn();
 	} else {
 		//user choice again
